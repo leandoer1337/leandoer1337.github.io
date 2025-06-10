@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>lean | GitHub Portfolio</title>
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #222;
+      --accent: #0366d6;
+      --card: #fff;
+    }
+
+    body.dark {
+      --bg: #1e1e1e;
+      --text: #f1f1f1;
+      --accent: #58a6ff;
+      --card: #2c2c2c;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
+      animation: fadeIn 0.6s ease;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+    }
+
+    .projects a {
+      display: block;
+      background: var(--card);
+      border: 1px solid #ccc;
+      padding: 0.8rem;
+      margin-bottom: 0.7rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--accent);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .projects a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      padding: 2rem 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>lean</h1>
+    <p>Programmer | Cybersecurity | GitHub Portfolio</p>
+    <button class="toggle" onclick="toggleDarkMode()">☀️ / 🌙</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I'm lean — a developer focused on cybersecurity and programming. I love building tools and learning tech.</p>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <a href="https://github.com/leandoer1337/Simple-.TXT-Duplicate-Cleaner" target="_blank">🔧 Simple .TXT Duplicate Cleaner - A lightweight Python GUI tool that scans .txt files or entire folders for duplicate lines and removes them</a>
+      <a href="" target="_blank">📦 Project 2 - Coming soon!!!</a>
+      <!-- Add more links -->
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:leandoer7331@gmail.com">leandoer7331@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/leandoer1337" target="_blank">github.com/leandoer1337</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 lean. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+    }
+
+    // Load theme from local storage
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark');
+    }
+  </script>
+</body>
+</html>
